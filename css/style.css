@@ -1,0 +1,749 @@
+@import url('https://fonts.googleapis.com/css2?family=Suez+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple|3d-float');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #fafafa;
+  font-family: "Bebas Neue", cursive;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: gold;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: white
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 33px;
+  font-family: 'Suez One', serif;
+  font-weight: bold;
+}
+
+.menu {
+  display: none;
+}
+
+.menu.open {
+  display: block;
+  position: absolute;
+  top: 80px;
+  background-color: #fafafa;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .menu.open {
+    right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu.open {
+    right: 0;
+    left: 0;
+  }
+}
+
+.menu.open ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu.open li {
+  margin-bottom: 10px;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  color: #767676;
+}
+
+.menu li {
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+  margin: 0 10px;
+}
+
+.burger-menu {
+  display: block;
+  cursor: pointer;
+}
+
+.line {
+  width: 25px;
+  height: 2px;
+  background-color: #333;
+  margin: 5px;
+}
+
+@media (min-width: 1275px) {
+  .menu {
+    display: flex;
+    position: static;
+  }
+  .burger-menu {
+    display: none;
+  }
+}
+
+.container .menu.open {
+  max-width: 100%;
+}
+
+.line1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.line2 {
+  opacity: 0;
+}
+
+.line3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+#burger-menu.open .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+#burger-menu.open .line:nth-child(2) {
+  opacity: 0;
+}
+
+#burger-menu.open .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+#intro {
+  padding: 350px 0;
+  width: 100%;
+  background-image: url("https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2020&q=80");
+  background-blend-mode: multiply;
+  background-color: #818181;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  color: #fff;
+}
+
+#intro h2{
+  font-size:100px;
+  text-shadow: 0 0.032em 0 #b0b0b0, 0px 0.15em 0.11em rgba(0,0,0,0.15), 0px 0.25em 0.021em rgba(0,0,0,0.1), 0px 0.32em 0.32em rgba(0,0,0,0.1);
+  color: #fff;
+  padding-top: 5%;
+  margin: 0;
+}
+
+#intro h3 {
+  font-size:50px;
+  text-shadow: 0 0.032em 0 #b0b0b0, 0px 0.15em 0.11em rgba(0,0,0,0.15), 0px 0.25em 0.021em rgba(0,0,0,0.1), 0px 0.32em 0.32em rgba(0,0,0,0.1);
+  color: #ccc;
+  margin: 0;
+  padding:0;
+}
+
+#first .jumbotron-fluid
+{
+  padding: 100px 0;
+  width: 100%;
+  float: left;
+  background-color: #f6f6f6;
+  border-top: 2px solid silver;
+  font-size: 1.3em;
+}
+
+#first .container-fluid {
+  width: 100%;
+  margin-right: 100%;
+  float: inherit;
+}
+
+#first h1 {
+  font-size: 3em;
+}
+
+#about {
+  background-color: #f6f6f6;
+  padding: 50px 0;
+}
+
+#about h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.circle-photo {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  float: left;
+  margin-right: 30px;
+}
+
+/* Media queries */
+@media (max-width: 991px) {
+  .circle-photo {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+  }
+
+  .col-md-10 {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .circle-photo {
+    float: none;
+    display: block;
+    margin: 0 auto 20px;
+  }
+
+  .col-md-4 {
+    text-align: center;
+  }
+}
+
+
+
+#first p {color: #a0a0a0; font-family: 'Raleway', sans-serif;}
+
+#second {
+  float: left;
+  background-image: url(https://cdn.wallpapersafari.com/4/44/JgEZQu.jpg);
+  background-blend-mode: multiply;
+  background-color: #707070;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 50px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+#second h2 {font-size: 4em;
+  text-align: center;
+  text-shadow: 0 0.032em 0 #b0b0b0, 0px 0.15em 0.11em rgba(0,0,0,0.15), 0px 0.25em 0.021em rgba(0,0,0,0.1), 0px 0.32em 0.32em rgba(0,0,0,0.1);
+}
+
+#second h4 {color: #ccc; font-size: 2em;
+  font-family: 'Raleway', sans-serif;
+}
+
+#second .box-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+}
+
+#second .box-container .box {
+  width: 27rem;
+  margin: 4rem 1rem;
+  border-left: .2rem solid #fff;
+  padding-left: 4rem;
+  position: relative;
+}
+
+#second .box-container .box span {
+    font-size: 1.5rem;
+    background: var(--yellow);
+    color: #fff;
+    border-radius: 5rem;
+    padding: .5rem 1.5rem;
+}
+
+#second .box-container .box h3 {
+  font-size: 2rem;
+  font-family: 'Courier New', sans-serif;
+  padding-top: 1.5rem;
+  color: #fff;
+}
+
+#second .box-container .box p {
+  font-size: 1.4rem;
+  padding: 1rem 0;
+  text-align: left;
+  font-family: 'Raleway', sans-serif;
+  color: #eee;
+}
+
+#second .box-container .box i {
+  position: absolute;
+  top: -1.5rem;
+  left: -2.5rem;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  line-height: 5rem;
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  background: var(--yellow);
+}
+
+#second .box-container .box {
+  width: 100%;
+}
+
+
+#skills {
+  padding: 50px 0;
+}
+
+.skills-wrapper {
+  display: flex;
+  flex-wrap: wrap; /* allow skills to wrap to next row */
+  justify-content: space-between;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 30%;
+  margin-bottom: 30px;
+}
+
+.skill i {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.skill h3 {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .skills-wrapper {
+    flex-direction: column; /* stack skills vertically */
+    align-items: center; /* center skills horizontally */
+  }
+  
+  .skill {
+    width: 80%; /* make skills full-width on smaller screens */
+    margin-bottom: 20px; /* reduce bottom margin */
+  }
+  
+  .skill i {
+    font-size: 3rem; /* reduce icon size */
+  }
+}
+
+#third {
+  float: left;
+  background-image: url(https://rare-gallery.com/uploads/posts/4518273-programming-languages.jpg);
+  background-blend-mode: multiply;
+  background-color: #464646;
+  background-size: cover;
+  background-attachment: fixed;
+
+  padding: 100px 0;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+#third h6 {font-size: 4em;
+  text-shadow: 0 0.032em 0 #b0b0b0, 0px 0.15em 0.11em rgba(0,0,0,0.15), 0px 0.25em 0.021em rgba(0,0,0,0.1), 0px 0.32em 0.32em rgba(0,0,0,0.1);
+}
+
+#third h2 {color: #ccc; font-size: 2em;
+  font-family: 'Raleway', sans-serif;
+}
+
+#third p {color: #ccc; font-size: 2em; width:100%; font-family: 'Raleway', sans-serif;}
+
+#third .news-block {
+  margin: 0;
+  padding: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-shadow: 0 0.032em 0 #b0b0b0, 0px 0.15em 0.11em rgba(0,0,0,0.15), 0px 0.25em 0.021em rgba(0,0,0,0.1), 0px 0.32em 0.32em rgba(0,0,0,0.1);
+}
+/* Project section styles */
+
+#fourth {
+  float: left;
+  background-image: url(https://thecommunity.ru/uploads/posts/2022-05/ztt86sp.jpg);
+  background-blend-mode: multiply;
+  background-color: #464646;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 100px 0;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+#fourth h1 {
+  font-size: 4em;
+  text-shadow: 0 0.032em 0 #b0b0b0, 0px 0.15em 0.11em rgba(0,0,0,0.15), 0px 0.25em 0.021em rgba(0,0,0,0.1), 0px 0.32em 0.32em rgba(0,0,0,0.1);
+}
+
+#fourth h2 {
+  color: #ccc;
+  font-size: 2em;
+  font-family: 'Raleway', sans-serif;
+  margin-top: -12px;
+}
+
+#fourth h3 {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#fourth p {
+  font-family: "Inter", sans-serif;
+}
+
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.project-item {
+  width: calc(33.333% - 20px);
+  margin-bottom: 50px;
+  text-align: center;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .project-item {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .project-item {
+    width: 100%;
+  }
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.project__image {
+  max-width: 95%;
+  height: auto;
+  opacity: 0.6;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.view-button {
+  position: absolute; 
+  font-family: "Inter", sans-serif;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.image-container:hover img {
+  opacity: 1;
+}
+
+.project-item:hover .view-button {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.project-item:hover .image-container:hover .view-button {
+  background-color: #000;
+  color: #fff;
+}
+
+.view-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+#fifth {
+  padding: 50px 5%;
+  width: 100%;
+  float: left;
+  background-color: #ffffff;
+  border-top: 2px solid silver;
+  font-size: 1em;
+}
+
+#fifth h1 {
+  font-size: 4em;
+}
+
+#contact-form {
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: "Inter", sans-serif;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-family: "Inter", sans-serif;
+  /* font-weight: bold; */
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+#status {
+  margin-top: 20px;
+  font-weight: normal;
+}
+
+#fifth .page-footer ul {
+  padding: 5px 0;
+}
+
+/* GitHub and Telegram icons */
+.fa-github, .fa-telegram {
+  color: #333;
+  transition: color 0.3s ease-in-out;
+}
+
+.fa-github:hover, .fa-telegram:hover {
+  color: #4078c0;
+}
+
+@media only screen and (max-width: 768px) {
+  #fifth {
+    padding: 50px 2%;
+  }
+
+  .page-footer h5 {
+    font-size: 2em;
+    text-align: left;
+  }
+
+  #fifth h1 {
+    font-size: 3em;
+  }
+
+  .page-footer font {
+    font-size: 0.9em;
+  }
+  .socialnetworks {
+    text-align: left;
+  }
+}
+
+.cursor {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 1px solid black;
+  transition: all 200ms ease-out;
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  transform: translate(calc(-50% + 15px), -50%);
+}
+
+.cursor2 {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: black;
+  opacity: .3;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: width .3s, height .3s, opacity .3s;
+}
+
+.hover {
+  background-color: red;
+  opacity: 0.5;
+}
+
+.cursorinnerhover {
+  width: 50px;
+  height: 50px;
+  opacity: .5;
+}
+
+.ripple {
+   width: 10px;
+   height: 10px;
+   background-color: transparent;
+   position: fixed;
+   border-radius: 50%;
+   border: 1px solid #ffffff59;
+}
+
+@keyframes ripple-effect {
+   to {
+      transform:scale(15);
+      opacity: 0.01;
+   }
+  }
+
+
+.container{
+  max-width: 2000px;
+  padding: 0 15px;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+.row {
+  display: table-row;
+}
+
+.popup {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.8s ease 0s;
+}
+
+.popup__body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup__content {
+  color: #000;
+  max-width: 800px;
+  position: relative;
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+  transform: translate(0px, -100%);
+}
+
+.popup__Area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.popup_img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.popup__close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 20px;
+  color: #000;
+  text-decoration: none;
+}
+
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup:target .popup__content {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+#popupAITU .popimg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
